@@ -2,12 +2,22 @@
 #define GAME_H
 
 #include <iostream>
+#include <map>
+#include <utility>
+#include <sstream>
+#include <string>
+#include <vector>
 #include <SFML/Graphics.hpp>
 
 #include "case.h"
+#include "pawn.h"
+#include "king.h"
+#include "queen.h"
+#include "rook.h"
+#include "bishop.h"
+#include "knight.h"
 
-class Game
-{
+class Game {
     public:
         Game();
         Game(int, int, const char*);
@@ -17,6 +27,12 @@ class Game
         void processEvents();
         void update();
         void render();
+
+        std::map<std::string,Case> board;
+        std::vector<Piece*> whitePieces;
+        std::vector<Piece*> blackPieces;
+
+        int boardSize;
 
         sf::RenderWindow window;
 };

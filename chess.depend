@@ -417,3 +417,76 @@
 1556153291 source:c:\users\pamar\documents\mesdocuments\projets\sfml_chess\src\game.cpp
 	"game.h"
 
+1563566929 source:c:\users\pamar\documents\mesdocuments\projets\chess\main.cpp
+	"game.h"
+
+1563579031 c:\users\pamar\documents\mesdocuments\projets\chess\include\game.h
+	<iostream>
+	<map>
+	<utility>
+	<sstream>
+	<string>
+	<vector>
+	<SFML/Graphics.hpp>
+	"case.h"
+	"pawn.h"
+	"king.h"
+	"queen.h"
+	"rook.h"
+	"bishop.h"
+	"knight.h"
+
+1563557536 c:\users\pamar\documents\mesdocuments\projets\chess\include\case.h
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1563566925 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\case.cpp
+	"case.h"
+
+1563579159 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\game.cpp
+	"game.h"
+
+1563567382 c:\users\pamar\documents\mesdocuments\projets\chess\include\piece.h
+	<string>
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1563567205 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\pawn.cpp
+	"pawn.h"
+
+1563567210 c:\users\pamar\documents\mesdocuments\projets\chess\include\pawn.h
+	"piece.h"
+
+1563568120 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\piece.cpp
+	"piece.h"
+
+1563567197 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\king.cpp
+	"king.h"
+
+1563567201 c:\users\pamar\documents\mesdocuments\projets\chess\include\king.h
+	"piece.h"
+
+1563568043 c:\users\pamar\documents\mesdocuments\projets\chess\include\queen.h
+	"piece.h"
+
+1563568061 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\queen.cpp
+	"queen.h"
+
+1563578758 c:\users\pamar\documents\mesdocuments\projets\chess\include\rook.h
+	<piece.h>
+
+1563578777 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\rook.cpp
+	"rook.h"
+
+1563578961 c:\users\pamar\documents\mesdocuments\projets\chess\include\bishop.h
+	<piece.h>
+
+1563578980 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\bishop.cpp
+	"bishop.h"
+
+1563579113 c:\users\pamar\documents\mesdocuments\projets\chess\include\knight.h
+	<piece.h>
+
+1563579129 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\knight.cpp
+	"knight.h"
+
