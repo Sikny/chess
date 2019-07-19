@@ -13,7 +13,6 @@ void Piece::setPosition(std::string pos){
     int intCol = static_cast<int>(col)-static_cast<int>('a');
     float paddingX = cellSize-(static_cast<float>(texture.getSize().x)*sprite.getScale().x);
     float paddingY = cellSize-(static_cast<float>(texture.getSize().y)*sprite.getScale().y);
-    std::cout << paddingX << ", " << paddingY << std::endl;
     sprite.setPosition(sf::Vector2f(intCol*cellSize+cellSize-boardSize/2+paddingX/2, row*cellSize+cellSize-boardSize/2+paddingY/2));
 }
 

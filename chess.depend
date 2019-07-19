@@ -420,7 +420,7 @@
 1563566929 source:c:\users\pamar\documents\mesdocuments\projets\chess\main.cpp
 	"game.h"
 
-1563579031 c:\users\pamar\documents\mesdocuments\projets\chess\include\game.h
+1563580649 c:\users\pamar\documents\mesdocuments\projets\chess\include\game.h
 	<iostream>
 	<map>
 	<utility>
@@ -429,12 +429,7 @@
 	<vector>
 	<SFML/Graphics.hpp>
 	"case.h"
-	"pawn.h"
-	"king.h"
-	"queen.h"
-	"rook.h"
-	"bishop.h"
-	"knight.h"
+	"chesspieces.h"
 
 1563557536 c:\users\pamar\documents\mesdocuments\projets\chess\include\case.h
 	<iostream>
@@ -457,7 +452,7 @@
 1563567210 c:\users\pamar\documents\mesdocuments\projets\chess\include\pawn.h
 	"piece.h"
 
-1563568120 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\piece.cpp
+1563579832 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\piece.cpp
 	"piece.h"
 
 1563567197 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\king.cpp
@@ -488,5 +483,13 @@
 	<piece.h>
 
 1563579129 source:c:\users\pamar\documents\mesdocuments\projets\chess\src\knight.cpp
+	"knight.h"
+
+1563580626 c:\users\pamar\documents\mesdocuments\projets\chess\include\chesspieces.h
+	"pawn.h"
+	"king.h"
+	"queen.h"
+	"rook.h"
+	"bishop.h"
 	"knight.h"
 

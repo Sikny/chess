@@ -10,12 +10,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "case.h"
-#include "pawn.h"
-#include "king.h"
-#include "queen.h"
-#include "rook.h"
-#include "bishop.h"
-#include "knight.h"
+#include "chesspieces.h"
 
 class Game {
     public:
