@@ -13,6 +13,8 @@ class Piece {
         void draw(sf::RenderWindow& window);
         void setName(const std::string& name);
         void loadTexture();
+        void move(const std::string& pos);
+        virtual bool canBeMoved(const std::string& pos) = 0;
 
     protected:
         std::string imageName();

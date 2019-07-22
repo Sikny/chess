@@ -14,7 +14,7 @@ void Piece::setPosition(const std::string& pos){
     float paddingX = cellSize-(static_cast<float>(texture.getSize().x)*sprite.getScale().x);
     float paddingY = cellSize-(static_cast<float>(texture.getSize().y)*sprite.getScale().y);
     sprite.setPosition(sf::Vector2f(intCol*cellSize+cellSize-static_cast<float>(boardSize)/2+paddingX/2,
-            row*cellSize+cellSize-static_cast<float>(boardSize)/2+paddingY/2));
+            static_cast<float>(boardSize)*cellSize-row*cellSize-static_cast<float>(boardSize)/2+paddingY/2));
 }
 
 std::string Piece::imageName(){
@@ -51,3 +51,10 @@ void Piece::loadTexture(){
 void Piece::draw(sf::RenderWindow& window){
     window.draw(sprite);
 }
+
+void Piece::move(const std::string &pos) {
+    if(canBeMoved(pos)){
+        setPosition(pos);
+    }
+}
+

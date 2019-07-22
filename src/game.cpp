@@ -102,8 +102,13 @@ void Game::processEvents(){
                             selectedPiece = piece;
                             board[strStream.str()].select();
                             cout << "select: " << strStream.str() << endl;
+                        } else if(selectedPiece != nullptr){
+                            cout << "moving from: " << selectedPiece->getPosition() << " to: " << strStream.str() << endl;
+                            selectedPiece->move(strStream.str());
+                            selectedPiece = nullptr;
                         }
                     }
+                    strStream.str("");
                 }
             }
         }
