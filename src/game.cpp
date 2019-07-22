@@ -67,10 +67,25 @@ void Game::run(){
 
 void Game::processEvents(){
     sf::Event event;
-    while (window.pollEvent(event))
-    {
+    while (window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
             window.close();
+        else if(event.type == sf::Event::MouseMoved){
+            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+            char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
+            for (char col = 'a'; col <= maxChar; col++) {
+                for (int row = 1; row <= boardSize; row++) {
+                    stringstream strStream;
+                    strStream << col << row;
+                    int intCol = static_cast<int>(col) - static_cast<int>('a');
+                    if(board[strStream.str()].hasMouseOver(mousePos)){
+                        board[strStream.str()].hover();
+                    } else {
+                        board[strStream.str()].unhover();
+                    }
+                }
+            }
+        }
     }
 }
 

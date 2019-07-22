@@ -9,6 +9,9 @@ class Case {
         Case();
         Case(int, int, int);
         void draw(sf::RenderWindow& window);
+        void hover();
+        void unhover();
+        bool hasMouseOver(sf::Vector2i mousePos);
 
     private:
         float posRow, posCol;

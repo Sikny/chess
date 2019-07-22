@@ -20,3 +20,16 @@ void Case::draw(sf::RenderWindow& window){
     shape.setFillColor(color);
     window.draw(shape);
 }
+
+void Case::hover(){
+    color.a = 150;
+}
+
+void Case::unhover(){
+    color.a = 255;
+}
+
+bool Case::hasMouseOver(sf::Vector2i mousePos){
+    return (mousePos.x >= posRow && mousePos.y >= posCol
+        && mousePos.x < posRow+caseSize && mousePos.y < posCol+caseSize);
+}
