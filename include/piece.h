@@ -9,9 +9,9 @@ class Piece {
     public:
         Piece(sf::Color color);
         std::string getPosition();
-        void setPosition(std::string pos);
+        void setPosition(const std::string& pos);
         void draw(sf::RenderWindow& window);
-        void setName(std::string name);
+        void setName(const std::string& name);
         void loadTexture();
 
     protected:

@@ -18,6 +18,7 @@ class Game {
         Game();
         Game(int, int, const char*);
         void run();
+        Piece* getPieceAtPos(const std::string& position);
 
     private:
         void processEvents();
@@ -29,6 +30,7 @@ class Game {
         std::vector<Piece*> blackPieces;
 
         int boardSize;
+        Piece* selectedPiece;
 
         sf::RenderWindow window;
 };

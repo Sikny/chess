@@ -9,7 +9,7 @@ Game::Game(int w, int h, const char* title)
     cout << "Building board..." << endl;
     char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
     for (char col = 'a'; col <= maxChar; col++) {
-        for (int row = 1; row <= boardSize; row++) {
+        for (int row = boardSize; row >= 1; row--) {
             stringstream strStream;
             strStream << col << row;
             int intCol = static_cast<int>(col) - static_cast<int>('a');
@@ -55,6 +55,8 @@ Game::Game(int w, int h, const char* title)
 
     blackPieces.push_back(PieceFactory::buildPiece("knight", sf::Color::Black, "b8"));
     blackPieces.push_back(PieceFactory::buildPiece("knight", sf::Color::Black, "g8"));
+
+    selectedPiece = nullptr;
 }
 
 void Game::run(){
@@ -66,22 +68,41 @@ void Game::run(){
 }
 
 void Game::processEvents(){
-    sf::Event event;
+    sf::Event event = sf::Event();
     while (window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
             window.close();
-        else if(event.type == sf::Event::MouseMoved){
+        else if(event.type == sf::Event::MouseMoved) {
             sf::Vector2i mousePos = sf::Mouse::getPosition(window);
             char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
             for (char col = 'a'; col <= maxChar; col++) {
-                for (int row = 1; row <= boardSize; row++) {
+                for (int row = boardSize; row >= 1; row--) {
                     stringstream strStream;
                     strStream << col << row;
-                    int intCol = static_cast<int>(col) - static_cast<int>('a');
-                    if(board[strStream.str()].hasMouseOver(mousePos)){
+                    if (board[strStream.str()].hasMouseOver(mousePos)) {
                         board[strStream.str()].hover();
                     } else {
                         board[strStream.str()].unhover();
+                    }
+                }
+            }
+        } else if(event.type == sf::Event::MouseButtonReleased){
+            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+            char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
+            for (char col = 'a'; col <= maxChar; col++) {
+                for (int row = boardSize; row >= 1; row--) {
+                    stringstream strStream;
+                    strStream << col << row;
+                    if(board[strStream.str()].isSelected()){
+                        cout << "unselect: " << strStream.str() << endl;
+                        board[strStream.str()].unselect();
+                    } else if(board[strStream.str()].hasMouseOver(mousePos)) {
+                        Piece* piece = getPieceAtPos(strStream.str());
+                        if(piece != nullptr) {
+                            selectedPiece = piece;
+                            board[strStream.str()].select();
+                            cout << "select: " << strStream.str() << endl;
+                        }
                     }
                 }
             }
@@ -105,4 +126,16 @@ void Game::render(){
         (*itB)->draw(window);
     }
     window.display();
+}
+
+Piece* Game::getPieceAtPos(const std::string &position) {
+    for(auto & whitePiece : whitePieces){
+        if(whitePiece->getPosition() == position)
+            return whitePiece;
+    }
+    for(auto & blackPiece : blackPieces) {
+        if (blackPiece->getPosition() == position)
+            return blackPiece;
+    }
+    return nullptr;
 }

@@ -6,14 +6,15 @@ std::string Piece::getPosition(){
     return position;
 }
 
-void Piece::setPosition(std::string pos){
+void Piece::setPosition(const std::string& pos){
     position = pos;
     char col = position.at(0);
     int row = static_cast<int>(position.at(1)-'0')-1;
     int intCol = static_cast<int>(col)-static_cast<int>('a');
     float paddingX = cellSize-(static_cast<float>(texture.getSize().x)*sprite.getScale().x);
     float paddingY = cellSize-(static_cast<float>(texture.getSize().y)*sprite.getScale().y);
-    sprite.setPosition(sf::Vector2f(intCol*cellSize+cellSize-boardSize/2+paddingX/2, row*cellSize+cellSize-boardSize/2+paddingY/2));
+    sprite.setPosition(sf::Vector2f(intCol*cellSize+cellSize-static_cast<float>(boardSize)/2+paddingX/2,
+            row*cellSize+cellSize-static_cast<float>(boardSize)/2+paddingY/2));
 }
 
 std::string Piece::imageName(){
@@ -25,7 +26,7 @@ std::string Piece::imageName(){
     return imgName;
 }
 
-void Piece::setName(std::string newName){
+void Piece::setName(const std::string& newName){
     name = newName;
 }
 
