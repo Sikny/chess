@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/pamar/Documents/MesDocuments/Projets/chess/include/PieceFactory.h">
+			<Option target="chess"/>
+		</Unit>
 		<Unit filename="C:/Users/pamar/Documents/MesDocuments/Projets/chess/include/bishop.h">
 			<Option target="chess"/>
 		</Unit>
@@ -115,6 +118,9 @@
 			<Option target="chess"/>
 		</Unit>
 		<Unit filename="C:/Users/pamar/Documents/MesDocuments/Projets/chess/main.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/PieceFactory.cpp">
 			<Option target="chess"/>
 		</Unit>
 		<Unit filename="C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/bishop.cpp">

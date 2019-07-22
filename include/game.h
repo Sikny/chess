@@ -10,6 +10,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "case.h"
+#include "PieceFactory.h"
 #include "chesspieces.h"
 
 class Game {

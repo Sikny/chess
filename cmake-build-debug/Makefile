@@ -149,6 +149,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/PieceFactory.obj: src/PieceFactory.cpp.obj
+
+.PHONY : src/PieceFactory.obj
+
+# target to build an object file
+src/PieceFactory.cpp.obj:
+	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/PieceFactory.cpp.obj
+.PHONY : src/PieceFactory.cpp.obj
+
+src/PieceFactory.i: src/PieceFactory.cpp.i
+
+.PHONY : src/PieceFactory.i
+
+# target to preprocess a source file
+src/PieceFactory.cpp.i:
+	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/PieceFactory.cpp.i
+.PHONY : src/PieceFactory.cpp.i
+
+src/PieceFactory.s: src/PieceFactory.cpp.s
+
+.PHONY : src/PieceFactory.s
+
+# target to generate assembly for a file
+src/PieceFactory.cpp.s:
+	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/PieceFactory.cpp.s
+.PHONY : src/PieceFactory.cpp.s
+
 src/bishop.obj: src/bishop.cpp.obj
 
 .PHONY : src/bishop.obj
@@ -404,6 +431,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/PieceFactory.obj
+	@echo ... src/PieceFactory.i
+	@echo ... src/PieceFactory.s
 	@echo ... src/bishop.obj
 	@echo ... src/bishop.i
 	@echo ... src/bishop.s
