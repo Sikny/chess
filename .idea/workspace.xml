@@ -12,30 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8345fd1f-444d-41f4-bd57-2eec98906b3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/bishop.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/bishop.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/king.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/king.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/knight.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/knight.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/pawn.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/pawn.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/piece.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/piece.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/queen.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/queen.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/rook.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/rook.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bishop.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/bishop.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/king.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/king.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/knight.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/knight.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/pawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/piece.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/piece.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/queen.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/queen.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/rook.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/rook.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bishop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/bishop.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/king.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/king.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/knight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/knight.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/piece.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/piece.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/queen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/queen.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rook.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/rook.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/piece.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pawn.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -120,7 +106,6 @@
         <option value="$PROJECT_DIR$/src/case.cpp" />
         <option value="$PROJECT_DIR$/include/piece.h" />
         <option value="$PROJECT_DIR$/include/pawn.h" />
-        <option value="$PROJECT_DIR$/src/pawn.cpp" />
         <option value="$PROJECT_DIR$/include/queen.h" />
         <option value="$PROJECT_DIR$/include/rook.h" />
         <option value="$PROJECT_DIR$/include/king.h" />
@@ -133,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/rook.cpp" />
         <option value="$PROJECT_DIR$/src/game.cpp" />
         <option value="$PROJECT_DIR$/src/piece.cpp" />
+        <option value="$PROJECT_DIR$/src/pawn.cpp" />
       </list>
     </option>
   </component>
@@ -218,7 +204,7 @@
       <workItem from="1563727703196" duration="4951000" />
       <workItem from="1563740320547" duration="7646000" />
       <workItem from="1563777891617" duration="5057000" />
-      <workItem from="1563783696949" duration="9052000" />
+      <workItem from="1563783696949" duration="9445000" />
     </task>
     <task id="LOCAL-00001" summary="External factory for piece instancing">
       <created>1563780706356</created>
@@ -245,18 +231,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26706000" />
+    <option name="totallyTimeSpent" value="27099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12178517" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12178517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31751227" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31751227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -429,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pawn.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -446,7 +425,14 @@
     <entry file="file://$PROJECT_DIR$/src/piece.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pawn.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
         </state>
       </provider>
     </entry>
