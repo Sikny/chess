@@ -7,8 +7,8 @@ bool Knight::canBeMoved(const std::string &pos) {
     int colDest = pos.at(1) - '0';
     char rowFrom = position.at(0);
     char rowDest = pos.at(0);
-    return ((colDest == colFrom-1 || colDest == colFrom+1) && (rowDest == rowFrom+2 || rowDest == rowFrom-2))
-        || ((colDest == colFrom-2 || colDest == colFrom+2) && (rowDest == rowFrom+1 || rowDest == rowFrom-1));
+    return ((std::abs(colDest-colFrom) == 1) && (std::abs(rowDest-rowFrom) == 2))
+        || ((std::abs(colDest-colFrom) == 2) && (std::abs(rowDest-rowFrom) == 1));
 }
 
 bool Knight::isKnight() {

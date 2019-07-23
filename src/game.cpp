@@ -163,7 +163,7 @@ bool Game::isObstructed(const std::string &position, const std::string &dest) {
                 return true;
             tmpPos.str("");
         }
-    } else if(colDest-colFrom == rowDest-rowFrom || colDest-colFrom == -(rowDest-rowFrom)) { // diagonals
+    } else if(colDest-colFrom == std::abs(rowDest-rowFrom)) { // diagonals
         int rowChg = signbit(rowDest - rowFrom)?-1:1;
         int colChg = signbit(colDest - colFrom)?-1:1;
         for(int i = 1; i < std::abs(colDest-colFrom); i++){
