@@ -14,9 +14,7 @@
     <list default="true" id="8345fd1f-444d-41f4-bd57-2eec98906b3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/rook.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/rook.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bishop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/bishop.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/piece.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/piece.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/queen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/queen.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/piece.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+            <state relative-caret-position="182">
+              <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -67,6 +65,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/queen.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="89" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/king.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/bishop.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -89,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/rook.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -124,7 +131,6 @@
         <option value="$PROJECT_DIR$/include/king.h" />
         <option value="$PROJECT_DIR$/include/knight.h" />
         <option value="$PROJECT_DIR$/include/bishop.h" />
-        <option value="$PROJECT_DIR$/src/queen.cpp" />
         <option value="$PROJECT_DIR$/src/pawn.cpp" />
         <option value="$PROJECT_DIR$/src/knight.cpp" />
         <option value="$PROJECT_DIR$/src/king.cpp" />
@@ -132,6 +138,7 @@
         <option value="$PROJECT_DIR$/src/bishop.cpp" />
         <option value="$PROJECT_DIR$/src/game.cpp" />
         <option value="$PROJECT_DIR$/src/piece.cpp" />
+        <option value="$PROJECT_DIR$/src/queen.cpp" />
       </list>
     </option>
   </component>
@@ -218,7 +225,7 @@
       <workItem from="1563740320547" duration="7646000" />
       <workItem from="1563777891617" duration="5057000" />
       <workItem from="1563783696949" duration="11746000" />
-      <workItem from="1563886652728" duration="708000" />
+      <workItem from="1563886652728" duration="902000" />
     </task>
     <task id="LOCAL-00001" summary="External factory for piece instancing">
       <created>1563780706356</created>
@@ -255,22 +262,29 @@
       <option name="project" value="LOCAL" />
       <updated>1563834688623</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bishop basic moving">
+      <created>1563887479601</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563887479601</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30108000" />
+    <option name="totallyTimeSpent" value="30302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.123298034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123298034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31751227" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31751227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -296,7 +310,8 @@
     <MESSAGE value="Fixed cases and pieces positions" />
     <MESSAGE value="king basic moving" />
     <MESSAGE value="rook basic moving" />
-    <option name="LAST_COMMIT_MESSAGE" value="rook basic moving" />
+    <MESSAGE value="bishop basic moving" />
+    <option name="LAST_COMMIT_MESSAGE" value="bishop basic moving" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/chess.cbp">
@@ -403,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/queen.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/case.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -424,10 +432,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/knight.cpp">
+    <entry file="file://$PROJECT_DIR$/src/game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="46">
+          <caret line="95" column="60" selection-start-line="95" selection-start-column="60" selection-end-line="95" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/piece.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -438,31 +453,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rook.cpp">
+    <entry file="file://$PROJECT_DIR$/src/knight.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bishop.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game.cpp">
+    <entry file="file://$PROJECT_DIR$/src/rook.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="95" column="60" selection-start-line="95" selection-start-column="60" selection-end-line="95" selection-end-column="60" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/piece.cpp">
+    <entry file="file://$PROJECT_DIR$/src/queen.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+        <state relative-caret-position="170">
+          <caret line="10" column="89" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
         </state>
       </provider>
     </entry>

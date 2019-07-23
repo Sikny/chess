@@ -14,9 +14,9 @@ iostream
 SFML/Graphics.hpp
 -
 
-../include/rook.h
+../include/queen.h
 piece.h
--
+../include/piece.h
 
 C:/Users/pamar/Documents/Libs/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h
@@ -688,7 +688,7 @@ SFML/Config.hpp
 
 C:/Users/pamar/Documents/Libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/rook.cpp
-rook.h
-C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/rook.h
+C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/queen.cpp
+queen.h
+C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/queen.h
 
