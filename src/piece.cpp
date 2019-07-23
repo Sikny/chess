@@ -61,10 +61,10 @@ bool Piece::move(const std::string &pos) {
     return false;
 }
 
-bool Piece::isKnight(){
-    return false;
-}
-
 sf::Color Piece::getColor() {
     return color;
+}
+
+std::string Piece::getName() {
+    return name;
 }

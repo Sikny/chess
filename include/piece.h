@@ -12,9 +12,9 @@ class Piece {
         void setPosition(const std::string& pos);
         void draw(sf::RenderWindow& window);
         void setName(const std::string& name);
+        std::string getName();
         void loadTexture();
         bool move(const std::string& pos);
-        virtual bool isKnight();
         sf::Color getColor();
 
     protected:

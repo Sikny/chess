@@ -8,6 +8,6 @@ bool Queen::canBeMoved(const std::string &pos) {
     char rowFrom = position.at(0);
     char rowDest = pos.at(0);
     return colFrom == colDest || rowFrom == rowDest  // rook
-        || colDest-colFrom == std::abs(rowDest-rowFrom);    // bishop
+        || (colDest-colFrom == rowDest-rowFrom || colDest-colFrom == -(rowDest-rowFrom));    // bishop
 
 }

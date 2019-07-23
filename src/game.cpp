@@ -90,25 +90,45 @@ void Game::processEvents(){
                     }
                 }
             }
-        } else if(event.type == sf::Event::MouseButtonReleased){
+        } else if(event.type == sf::Event::MouseButtonReleased){    // user selection
             sf::Vector2i mousePos = sf::Mouse::getPosition(window);
             char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
             for (char col = 'a'; col <= maxChar; col++) {
                 for (int row = boardSize; row >= 1; row--) {
                     stringstream strStream;
                     strStream << col << row;
-                    if(board[strStream.str()].isSelected()){
+                    if(board[strStream.str()].isSelected()){    // user previous selection
                         board[strStream.str()].unselect();
-                    } else if(board[strStream.str()].hasMouseOver(mousePos)) {
+                    } else if(board[strStream.str()].hasMouseOver(mousePos)) {  // user current selection
                         Piece* piece = getPieceAtPos(strStream.str());
-                        if(piece != nullptr) {
+                        if(piece != nullptr && piece->getColor() == currentPlayer) {  // an allied piece is on current selected case
                             selectedPiece = piece;
                             board[strStream.str()].select();
                         } else if(selectedPiece != nullptr && selectedPiece->getColor() == currentPlayer &&
-                        (selectedPiece->isKnight() || (!selectedPiece->isKnight()
-                                && !isObstructed(selectedPiece->getPosition(), strStream.str())))){
-                            if(selectedPiece->move(strStream.str()))
-                                currentPlayer = currentPlayer==sf::Color::White?sf::Color::Black:sf::Color::White;
+                        (selectedPiece->getName() == "knight" || (selectedPiece->getName() != "knight"
+                                && !isObstructed(selectedPiece->getPosition(), strStream.str())))){ // knight cant be obstructed
+                            Piece* otherPiece = getPieceAtPos(strStream.str()); // in case of enemy piece presence
+                            bool movedValid;
+                            if(selectedPiece->getName() != "pawn" || otherPiece == nullptr){
+                                if((movedValid = selectedPiece->move(strStream.str()))) {
+                                    currentPlayer = currentPlayer == sf::Color::White ? sf::Color::Black : sf::Color::White;
+                                }
+                            } else if((movedValid = dynamic_cast<Pawn*>(selectedPiece)->canTakeTo(strStream.str()))){
+                                std::cout << selectedPiece->getPosition() << " " << strStream.str() << std::endl;
+                                selectedPiece->setPosition(strStream.str());
+                                currentPlayer = currentPlayer == sf::Color::White ? sf::Color::Black : sf::Color::White;
+                            }
+                            if(otherPiece != nullptr && movedValid){  // taking enemy piece
+                                if(otherPiece->getColor() == sf::Color::Black){
+                                    blackTaken.push_back(otherPiece);
+                                    auto index = find(blackPieces.begin(), blackPieces.end(), otherPiece);
+                                    blackPieces.erase(index);
+                                } else {
+                                    whiteTaken.push_back(otherPiece);
+                                    auto index = find(whitePieces.begin(), whitePieces.end(), otherPiece);
+                                    whitePieces.erase(index);
+                                }
+                            }
                             selectedPiece = nullptr;
                         }
                     }
@@ -122,8 +142,8 @@ void Game::processEvents(){
 void Game::update(){
     currentPlayerDisplay.setString(std::string(currentPlayer==sf::Color::White?"White":"Black")+" turn");
     currentPlayerDisplay.setFillColor(currentPlayer);
-    currentPlayerDisplay.setPosition(sf::Vector2f(
-            window.getView().getSize().x/2-currentPlayerDisplay.getGlobalBounds().width/2, 0));
+    float playerTextPos = window.getView().getSize().x/2-currentPlayerDisplay.getGlobalBounds().width/2;
+    currentPlayerDisplay.setPosition(sf::Vector2f(playerTextPos, 0));
 }
 
 void Game::render(){

@@ -13,6 +13,9 @@
 #include "PieceFactory.h"
 #include "chesspieces.h"
 
+/**
+ * Game class, global application handler
+ */
 class Game {
     public:
         Game();
@@ -26,9 +29,11 @@ class Game {
         void render();
         bool isObstructed(const std::string& position, const std::string& dest);
 
-        std::map<std::string,Case> board;
+        std::map<std::string,Case> board;   // for displaying
         std::vector<Piece*> whitePieces;
+        std::vector<Piece*> blackTaken; // black pieces taken by white
         std::vector<Piece*> blackPieces;
+        std::vector<Piece*> whiteTaken; // white pieces taken by black
 
         int boardSize;
         Piece* selectedPiece;

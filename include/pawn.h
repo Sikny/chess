@@ -5,8 +5,9 @@
 
 class Pawn : public Piece{
     public:
-        Pawn(sf::Color color);
-        virtual bool canBeMoved(const std::string& pos);
+        explicit Pawn(sf::Color color);
+        bool canBeMoved(const std::string& pos) override;
+        bool canTakeTo(const std::string& pos);
 };
 
 #endif // PAWN_H

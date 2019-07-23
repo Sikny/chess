@@ -10,7 +10,3 @@ bool Knight::canBeMoved(const std::string &pos) {
     return ((std::abs(colDest-colFrom) == 1) && (std::abs(rowDest-rowFrom) == 2))
         || ((std::abs(colDest-colFrom) == 2) && (std::abs(rowDest-rowFrom) == 1));
 }
-
-bool Knight::isKnight() {
-    return true;
-}
