@@ -32,6 +32,10 @@ class Game {
 
         int boardSize;
         Piece* selectedPiece;
+        sf::Color currentPlayer;
+
+        sf::Text currentPlayerDisplay;
+        sf::Font font;
 
         sf::RenderWindow window;
 };

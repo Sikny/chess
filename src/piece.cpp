@@ -52,13 +52,19 @@ void Piece::draw(sf::RenderWindow& window){
     window.draw(sprite);
 }
 
-void Piece::move(const std::string &pos) {
+bool Piece::move(const std::string &pos) {
     if(canBeMoved(pos)){
         std::cout << position << " " << pos << std::endl;
         setPosition(pos);
+        return true;
     }
+    return false;
 }
 
 bool Piece::isKnight(){
     return false;
+}
+
+sf::Color Piece::getColor() {
+    return color;
 }

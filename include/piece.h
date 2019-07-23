@@ -7,14 +7,15 @@
 
 class Piece {
     public:
-        Piece(sf::Color color);
+        explicit Piece(sf::Color color);
         std::string getPosition();
         void setPosition(const std::string& pos);
         void draw(sf::RenderWindow& window);
         void setName(const std::string& name);
         void loadTexture();
-        void move(const std::string& pos);
+        bool move(const std::string& pos);
         virtual bool isKnight();
+        sf::Color getColor();
 
     protected:
         std::string imageName();

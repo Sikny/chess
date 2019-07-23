@@ -6,6 +6,9 @@ Game::Game() : Game(640, 480, "SFML Application"){}
 
 Game::Game(int w, int h, const char* title)
  : boardSize(8), window(sf::VideoMode(w, h), title) {
+    font.loadFromFile("resources/fonts/arial.ttf");
+    currentPlayerDisplay.setFont(font);
+
     cout << "Building board..." << endl;
     char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
     for (char col = 'a'; col <= maxChar; col++) {
@@ -57,6 +60,7 @@ Game::Game(int w, int h, const char* title)
     blackPieces.push_back(PieceFactory::buildPiece("knight", sf::Color::Black, "g8"));
 
     selectedPiece = nullptr;
+    currentPlayer = sf::Color::White;
 }
 
 void Game::run(){
@@ -100,9 +104,11 @@ void Game::processEvents(){
                         if(piece != nullptr) {
                             selectedPiece = piece;
                             board[strStream.str()].select();
-                        } else if(selectedPiece != nullptr &&  (selectedPiece->isKnight()
-                            || (!selectedPiece->isKnight() && !isObstructed(selectedPiece->getPosition(), strStream.str())))){
-                            selectedPiece->move(strStream.str());
+                        } else if(selectedPiece != nullptr && selectedPiece->getColor() == currentPlayer &&
+                        (selectedPiece->isKnight() || (!selectedPiece->isKnight()
+                                && !isObstructed(selectedPiece->getPosition(), strStream.str())))){
+                            if(selectedPiece->move(strStream.str()))
+                                currentPlayer = currentPlayer==sf::Color::White?sf::Color::Black:sf::Color::White;
                             selectedPiece = nullptr;
                         }
                     }
@@ -113,7 +119,12 @@ void Game::processEvents(){
     }
 }
 
-void Game::update(){}
+void Game::update(){
+    currentPlayerDisplay.setString(std::string(currentPlayer==sf::Color::White?"White":"Black")+" turn");
+    currentPlayerDisplay.setFillColor(currentPlayer);
+    currentPlayerDisplay.setPosition(sf::Vector2f(
+            window.getView().getSize().x/2-currentPlayerDisplay.getGlobalBounds().width/2, 0));
+}
 
 void Game::render(){
     window.clear(sf::Color(0, 74, 158));
@@ -128,6 +139,7 @@ void Game::render(){
     for(itB = blackPieces.begin(); itB != blackPieces.end(); itB++){
         (*itB)->draw(window);
     }
+    window.draw(currentPlayerDisplay);
     window.display();
 }
 
