@@ -164,38 +164,12 @@ bool Game::isObstructed(const std::string &position, const std::string &dest) {
             tmpPos.str("");
         }
     } else if(colDest-colFrom == rowDest-rowFrom || colDest-colFrom == -(rowDest-rowFrom)) { // diagonals
-        cout << "diagonal" << endl;
-        if(colDest-colFrom > 0) { // NORTH
-            cout << "north" << endl;
-            if(rowDest-rowFrom > 0) { // NE
-                for(int i = 1; i < colDest-colFrom; i++){
-                    tmpPos << static_cast<char>(rowFrom+1) << (colFrom+1);
-                    if(getPieceAtPos(tmpPos.str()) != nullptr)
-                        return true;
-                }
-            } else { // NW
-                cout << "west" << endl;
-                for(int i = 1; i < colDest-colFrom; i++){
-                    tmpPos << static_cast<char>(rowFrom-1) << (colFrom+1);
-                    cout << "testing " << tmpPos.str() << endl;
-                    if(getPieceAtPos(tmpPos.str()) != nullptr)
-                        return true;
-                }
-            }
-        } else { // SOUTH
-            if(rowDest-rowFrom > 0){ // SE
-                for(int i = 1; i < colFrom-colDest; i++){
-                    tmpPos << static_cast<char>(rowFrom+1) << (colFrom-1);
-                    if(getPieceAtPos(tmpPos.str()) != nullptr)
-                        return true;
-                }
-            } else { // SW
-                for(int i = 1; i < colFrom-colDest; i++){
-                    tmpPos << static_cast<char>(rowFrom-1) << (colFrom-1);
-                    if(getPieceAtPos(tmpPos.str()) != nullptr)
-                        return true;
-                }
-            }
+        int rowChg = signbit(rowDest - rowFrom)?-1:1;
+        int colChg = signbit(colDest - colFrom)?-1:1;
+        for(int i = 1; i < std::abs(colDest-colFrom); i++){
+            tmpPos << static_cast<char>(rowFrom+rowChg) << (colFrom+colChg);
+            if(getPieceAtPos(tmpPos.str()))
+                return true;
         }
     }
     return false;

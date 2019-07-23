@@ -13,20 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8345fd1f-444d-41f4-bd57-2eec98906b3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/game.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/knight.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/piece.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/queen.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/rook.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/chess.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/chess.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/knight.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/knight.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/piece.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/piece.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/bishop.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/bishop.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/king.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/king.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/pawn.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/src/pawn.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/knight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/knight.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/piece.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/piece.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="193" column="47" selection-start-line="193" selection-start-column="47" selection-end-line="193" selection-end-column="47" />
+            <state relative-caret-position="274">
+              <caret line="169" column="76" selection-start-line="169" selection-start-column="76" selection-end-line="169" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -258,7 +249,7 @@
       <workItem from="1563740320547" duration="7646000" />
       <workItem from="1563777891617" duration="5057000" />
       <workItem from="1563783696949" duration="11746000" />
-      <workItem from="1563886652728" duration="4012000" />
+      <workItem from="1563886652728" duration="5221000" />
     </task>
     <task id="LOCAL-00001" summary="External factory for piece instancing">
       <created>1563780706356</created>
@@ -316,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563887997659</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="obstruction handled when moving piece">
+      <created>1563890878290</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563890878290</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33412000" />
+    <option name="totallyTimeSpent" value="34621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -360,7 +358,8 @@
     <MESSAGE value="bishop basic moving" />
     <MESSAGE value="queen basic moving" />
     <MESSAGE value="knight basic moving" />
-    <option name="LAST_COMMIT_MESSAGE" value="knight basic moving" />
+    <MESSAGE value="obstruction handled when moving piece" />
+    <option name="LAST_COMMIT_MESSAGE" value="obstruction handled when moving piece" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/chess.cbp">
@@ -525,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="193" column="47" selection-start-line="193" selection-start-column="47" selection-end-line="193" selection-end-column="47" />
+        <state relative-caret-position="274">
+          <caret line="169" column="76" selection-start-line="169" selection-start-column="76" selection-end-line="169" selection-end-column="76" />
         </state>
       </provider>
     </entry>
