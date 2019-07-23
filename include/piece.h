@@ -10,6 +10,8 @@ class Piece {
         explicit Piece(sf::Color color);
         std::string getPosition();
         void setPosition(const std::string& pos);
+        void setAbsolutePosition(const sf::Vector2f& pos);
+        sf::Vector2f getAbsolutePosition();
         void draw(sf::RenderWindow& window);
         void setName(const std::string& name);
         std::string getName();

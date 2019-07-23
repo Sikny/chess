@@ -10,7 +10,7 @@ class Case {
         Case(int, int, int);
         void draw(sf::RenderWindow& window);
         void hover();
-        void unhover();
+        void unHover();
         void select();
         void unselect();
         bool hasMouseOver(sf::Vector2i mousePos);

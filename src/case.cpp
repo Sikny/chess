@@ -11,7 +11,7 @@ caseSize(50.0f), selected(false) {
         color = sf::Color(232, 235, 239);
     }
     posCol = col*caseSize+caseSize-static_cast<float>(boardSize)/2;
-    posRow = boardSize*caseSize-row*caseSize-static_cast<float>(boardSize)/2;
+    posRow = boardSize*caseSize+caseSize-row*caseSize-static_cast<float>(boardSize)/2;
     shape = sf::RectangleShape(sf::Vector2f(caseSize, caseSize));
     shape.setPosition(posCol, posRow);
 }
@@ -26,7 +26,7 @@ void Case::hover(){
     color.a = 150;
 }
 
-void Case::unhover(){
+void Case::unHover(){
     color.a = 255;
 }
 

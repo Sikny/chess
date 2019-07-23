@@ -7,8 +7,8 @@
 class Bishop : public Piece
 {
     public:
-        Bishop(sf::Color);
-        virtual bool canBeMoved(const std::string& pos);
+        explicit Bishop(sf::Color);
+        bool canBeMoved(const std::string& pos) override;
 };
 
 #endif // BISHOP_H

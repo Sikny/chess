@@ -24,6 +24,7 @@ class Game {
         Piece* getPieceAtPos(const std::string& position);
 
     private:
+        sf::Vector2f getNextPosition(std::vector<Piece*> list);
         void processEvents();
         void update();
         void render();

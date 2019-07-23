@@ -7,7 +7,7 @@
 class Knight : public Piece
 {
     public:
-        Knight(sf::Color);
+        explicit Knight(sf::Color);
         virtual bool canBeMoved(const std::string& pos);
 };
 

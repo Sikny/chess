@@ -86,7 +86,7 @@ void Game::processEvents(){
                     if (board[strStream.str()].hasMouseOver(mousePos)) {
                         board[strStream.str()].hover();
                     } else {
-                        board[strStream.str()].unhover();
+                        board[strStream.str()].unHover();
                     }
                 }
             }
@@ -120,10 +120,15 @@ void Game::processEvents(){
                             }
                             if(otherPiece != nullptr && movedValid){  // taking enemy piece
                                 if(otherPiece->getColor() == sf::Color::Black){
+                                    float cellSize = 50.0f;
+                                    sf::Vector2f nextPos = getNextPosition(blackTaken);
+                                    nextPos.y = boardSize*cellSize+cellSize*2+cellSize/4;
+                                    otherPiece->setAbsolutePosition(nextPos);
                                     blackTaken.push_back(otherPiece);
                                     auto index = find(blackPieces.begin(), blackPieces.end(), otherPiece);
                                     blackPieces.erase(index);
                                 } else {
+                                    otherPiece->setAbsolutePosition(getNextPosition(whiteTaken));
                                     whiteTaken.push_back(otherPiece);
                                     auto index = find(whitePieces.begin(), whitePieces.end(), otherPiece);
                                     whitePieces.erase(index);
@@ -158,6 +163,12 @@ void Game::render(){
     }
     for(itB = blackPieces.begin(); itB != blackPieces.end(); itB++){
         (*itB)->draw(window);
+    }
+    for(itB = blackTaken.begin(); itB != blackTaken.end(); itB++){
+        (*itB)->draw(window);
+    }
+    for(itW = whiteTaken.begin(); itW != whiteTaken.end(); itW++){
+        (*itW)->draw(window);
     }
     window.draw(currentPlayerDisplay);
     window.display();
@@ -206,3 +217,15 @@ bool Game::isObstructed(const std::string &position, const std::string &dest) {
     }
     return false;
 }
+
+sf::Vector2f Game::getNextPosition(std::vector<Piece *> list) {
+    if(list.empty())
+        return {30.0f, 40.0f};
+    else {
+        sf::Vector2f position = list.at(list.size()-1)->getAbsolutePosition();
+        cout << position.x << ", " << position.y << endl;
+        position.x += 20.0f;
+        return position;
+    }
+}
+
