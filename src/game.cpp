@@ -94,16 +94,13 @@ void Game::processEvents(){
                     stringstream strStream;
                     strStream << col << row;
                     if(board[strStream.str()].isSelected()){
-                        cout << "unselect: " << strStream.str() << endl;
                         board[strStream.str()].unselect();
                     } else if(board[strStream.str()].hasMouseOver(mousePos)) {
                         Piece* piece = getPieceAtPos(strStream.str());
                         if(piece != nullptr) {
                             selectedPiece = piece;
                             board[strStream.str()].select();
-                            cout << "select: " << strStream.str() << endl;
                         } else if(selectedPiece != nullptr){
-                            cout << "moving from: " << selectedPiece->getPosition() << " to: " << strStream.str() << endl;
                             selectedPiece->move(strStream.str());
                             selectedPiece = nullptr;
                         }

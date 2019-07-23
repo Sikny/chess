@@ -54,6 +54,7 @@ void Piece::draw(sf::RenderWindow& window){
 
 void Piece::move(const std::string &pos) {
     if(canBeMoved(pos)){
+        std::cout << position << " " << pos << std::endl;
         setPosition(pos);
     }
 }
