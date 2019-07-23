@@ -6,6 +6,68 @@
 
 #IncludeRegexTransform: 
 
+../include/PieceFactory.h
+chesspieces.h
+../include/chesspieces.h
+
+../include/bishop.h
+piece.h
+-
+
+../include/case.h
+iostream
+-
+SFML/Graphics.hpp
+-
+
+../include/chesspieces.h
+pawn.h
+../include/pawn.h
+king.h
+../include/king.h
+queen.h
+../include/queen.h
+rook.h
+../include/rook.h
+bishop.h
+../include/bishop.h
+knight.h
+../include/knight.h
+
+../include/game.h
+iostream
+-
+map
+-
+utility
+-
+sstream
+-
+string
+-
+vector
+-
+SFML/Graphics.hpp
+-
+case.h
+../include/case.h
+PieceFactory.h
+../include/PieceFactory.h
+chesspieces.h
+../include/chesspieces.h
+
+../include/king.h
+piece.h
+../include/piece.h
+
+../include/knight.h
+piece.h
+-
+
+../include/pawn.h
+piece.h
+../include/piece.h
+
 ../include/piece.h
 string
 -
@@ -17,6 +79,10 @@ SFML/Graphics.hpp
 ../include/queen.h
 piece.h
 ../include/piece.h
+
+../include/rook.h
+piece.h
+-
 
 C:/Users/pamar/Documents/Libs/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h
@@ -688,7 +754,7 @@ SFML/Config.hpp
 
 C:/Users/pamar/Documents/Libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/queen.cpp
-queen.h
-C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/queen.h
+C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/game.cpp
+game.h
+C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/game.h
 

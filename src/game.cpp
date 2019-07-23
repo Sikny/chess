@@ -100,7 +100,8 @@ void Game::processEvents(){
                         if(piece != nullptr) {
                             selectedPiece = piece;
                             board[strStream.str()].select();
-                        } else if(selectedPiece != nullptr){
+                        } else if(selectedPiece != nullptr &&  (selectedPiece->isKnight()
+                            || (!selectedPiece->isKnight() && !isObstructed(selectedPiece->getPosition(), strStream.str())))){
                             selectedPiece->move(strStream.str());
                             selectedPiece = nullptr;
                         }
@@ -140,4 +141,62 @@ Piece* Game::getPieceAtPos(const std::string &position) {
             return blackPiece;
     }
     return nullptr;
+}
+
+bool Game::isObstructed(const std::string &position, const std::string &dest) {
+    int colFrom = position.at(1) - '0';
+    int colDest = dest.at(1) - '0';
+    char rowFrom = position.at(0);
+    char rowDest = dest.at(0);
+    std::stringstream tmpPos;
+    if(colFrom == colDest){ // vertically
+        for(char c = std::min(rowFrom, rowDest)+1; c < std::max(rowFrom, rowDest); c++){
+            tmpPos << c << colFrom;
+            if(getPieceAtPos(tmpPos.str()) != nullptr)
+                return true;
+            tmpPos.str("");
+        }
+    } else if(rowFrom == rowDest){  // horizontally
+        for(int i = std::min(colFrom, colDest)+1; i < std::max(colFrom, colDest); i++){
+            tmpPos << rowFrom << i;
+            if(getPieceAtPos(tmpPos.str()) != nullptr)
+                return true;
+            tmpPos.str("");
+        }
+    } else if(colDest-colFrom == rowDest-rowFrom || colDest-colFrom == -(rowDest-rowFrom)) { // diagonals
+        cout << "diagonal" << endl;
+        if(colDest-colFrom > 0) { // NORTH
+            cout << "north" << endl;
+            if(rowDest-rowFrom > 0) { // NE
+                for(int i = 1; i < colDest-colFrom; i++){
+                    tmpPos << static_cast<char>(rowFrom+1) << (colFrom+1);
+                    if(getPieceAtPos(tmpPos.str()) != nullptr)
+                        return true;
+                }
+            } else { // NW
+                cout << "west" << endl;
+                for(int i = 1; i < colDest-colFrom; i++){
+                    tmpPos << static_cast<char>(rowFrom-1) << (colFrom+1);
+                    cout << "testing " << tmpPos.str() << endl;
+                    if(getPieceAtPos(tmpPos.str()) != nullptr)
+                        return true;
+                }
+            }
+        } else { // SOUTH
+            if(rowDest-rowFrom > 0){ // SE
+                for(int i = 1; i < colFrom-colDest; i++){
+                    tmpPos << static_cast<char>(rowFrom+1) << (colFrom-1);
+                    if(getPieceAtPos(tmpPos.str()) != nullptr)
+                        return true;
+                }
+            } else { // SW
+                for(int i = 1; i < colFrom-colDest; i++){
+                    tmpPos << static_cast<char>(rowFrom-1) << (colFrom-1);
+                    if(getPieceAtPos(tmpPos.str()) != nullptr)
+                        return true;
+                }
+            }
+        }
+    }
+    return false;
 }

@@ -24,6 +24,7 @@ class Game {
         void processEvents();
         void update();
         void render();
+        bool isObstructed(const std::string& position, const std::string& dest);
 
         std::map<std::string,Case> board;
         std::vector<Piece*> whitePieces;

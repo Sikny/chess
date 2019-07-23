@@ -14,10 +14,11 @@ class Piece {
         void setName(const std::string& name);
         void loadTexture();
         void move(const std::string& pos);
-        virtual bool canBeMoved(const std::string& pos) = 0;
+        virtual bool isKnight();
 
     protected:
         std::string imageName();
+        virtual bool canBeMoved(const std::string& pos) = 0;
 
         sf::Color color;
         float cellSize;

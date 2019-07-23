@@ -59,3 +59,6 @@ void Piece::move(const std::string &pos) {
     }
 }
 
+bool Piece::isKnight(){
+    return false;
+}
