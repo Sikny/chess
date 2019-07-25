@@ -2,8 +2,6 @@
 
 using namespace std;
 
-Game::Game() : Game(640, 480, "SFML Application"){}
-
 Game::Game(int w, int h, const char* title)
  : boardSize(8), window(sf::VideoMode(w, h), title) {
     font.loadFromFile("resources/fonts/arial.ttf");
@@ -228,4 +226,3 @@ sf::Vector2f Game::getNextPosition(std::vector<Piece *> list) {
         return position;
     }
 }
-

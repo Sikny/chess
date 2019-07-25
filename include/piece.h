@@ -18,10 +18,10 @@ class Piece {
         void loadTexture();
         bool move(const std::string& pos);
         sf::Color getColor();
+        virtual bool canBeMoved(const std::string& pos) = 0;
 
     protected:
         std::string imageName();
-        virtual bool canBeMoved(const std::string& pos) = 0;
 
         sf::Color color;
         float cellSize;

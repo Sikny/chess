@@ -18,13 +18,12 @@
  */
 class Game {
     public:
-        Game();
         Game(int, int, const char*);
         void run();
         Piece* getPieceAtPos(const std::string& position);
 
     private:
-        sf::Vector2f getNextPosition(std::vector<Piece*> list);
+        static sf::Vector2f getNextPosition(std::vector<Piece*> list);
         void processEvents();
         void update();
         void render();

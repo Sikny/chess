@@ -5,8 +5,8 @@
 
 class King : public Piece{
     public:
-        King(sf::Color color);
-        virtual bool canBeMoved(const std::string& pos);
+        explicit King(sf::Color color);
+        bool canBeMoved(const std::string& pos) override;
 };
 
 #endif // KING_H

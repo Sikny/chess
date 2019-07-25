@@ -10,3 +10,4 @@ bool King::canBeMoved(const std::string &pos) {
     return (colFrom == colDest + 1 || colFrom == colDest - 1 || colFrom == colDest)
            && (rowFrom == rowDest + 1 || rowFrom == rowDest - 1 || rowFrom == rowDest);
 }
+
