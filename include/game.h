@@ -35,7 +35,6 @@ class Game {
         std::vector<Piece*> blackPieces;
         std::vector<Piece*> whiteTaken; // white pieces taken by black
 
-        int boardSize;
         Piece* selectedPiece;
         sf::Color currentPlayer;
 

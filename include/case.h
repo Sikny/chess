@@ -4,10 +4,12 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
+#include "Settings.h"
+
 class Case {
     public:
         Case();
-        Case(int, int, int);
+        Case(int, int);
         void draw(sf::RenderWindow& window);
         void hover();
         void unHover();
@@ -19,8 +21,6 @@ class Case {
     private:
         float posRow, posCol;
         int row, col;
-        int boardSize;
-        float caseSize;
         bool selected;
         sf::Color color;
         sf::RectangleShape shape;

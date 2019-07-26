@@ -3,18 +3,18 @@
 using namespace std;
 
 Game::Game(int w, int h, const char* title)
- : boardSize(8), window(sf::VideoMode(w, h), title) {
+ : window(sf::VideoMode(w, h), title) {
     font.loadFromFile("resources/fonts/arial.ttf");
     currentPlayerDisplay.setFont(font);
 
     cout << "Building board..." << endl;
-    char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
+    char maxChar = static_cast<char>(static_cast<int>('a') + Settings::boardSize - 1);
     for (char col = 'a'; col <= maxChar; col++) {
-        for (int row = boardSize; row >= 1; row--) {
+        for (int row = Settings::boardSize; row >= 1; row--) {
             stringstream strStream;
             strStream << col << row;
             int intCol = static_cast<int>(col) - static_cast<int>('a');
-            Case newCase(row - 1, intCol, boardSize);
+            Case newCase(row - 1, intCol);
             board[strStream.str()] = newCase;
         }
     }
@@ -76,9 +76,9 @@ void Game::processEvents(){
             window.close();
         else if(event.type == sf::Event::MouseMoved) {
             sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-            char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
+            char maxChar = static_cast<char>(static_cast<int>('a') + Settings::boardSize - 1);
             for (char col = 'a'; col <= maxChar; col++) {
-                for (int row = boardSize; row >= 1; row--) {
+                for (int row = Settings::boardSize; row >= 1; row--) {
                     stringstream strStream;
                     strStream << col << row;
                     if (board[strStream.str()].hasMouseOver(mousePos)) {
@@ -90,9 +90,9 @@ void Game::processEvents(){
             }
         } else if(event.type == sf::Event::MouseButtonReleased){    // user selection
             sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-            char maxChar = static_cast<char>(static_cast<int>('a') + boardSize - 1);
+            char maxChar = static_cast<char>(static_cast<int>('a') + Settings::boardSize - 1);
             for (char col = 'a'; col <= maxChar; col++) {
-                for (int row = boardSize; row >= 1; row--) {
+                for (int row = Settings::boardSize; row >= 1; row--) {
                     stringstream strStream;
                     strStream << col << row;
                     if(board[strStream.str()].isSelected()){    // user previous selection
@@ -120,7 +120,7 @@ void Game::processEvents(){
                                 if(otherPiece->getColor() == sf::Color::Black){
                                     float cellSize = 50.0f;
                                     sf::Vector2f nextPos = getNextPosition(blackTaken);
-                                    nextPos.y = boardSize*cellSize+cellSize*2+cellSize/4;
+                                    nextPos.y = Settings::boardSize*cellSize+cellSize*2+cellSize/4;
                                     otherPiece->setAbsolutePosition(nextPos);
                                     blackTaken.push_back(otherPiece);
                                     auto index = find(blackPieces.begin(), blackPieces.end(), otherPiece);

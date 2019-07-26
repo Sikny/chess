@@ -25,7 +25,7 @@ add_executable(chess
         src/piece.cpp
         src/queen.cpp
         src/rook.cpp
-        main.cpp src/PieceFactory.cpp include/PieceFactory.h)
+        main.cpp src/PieceFactory.cpp include/PieceFactory.h src/Settings.cpp include/Settings.h)
 
 find_package(SFML REQUIRED graphics window system)
 include_directories(include ${SFML_INCLUDE_DIR})

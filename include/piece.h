@@ -5,6 +5,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
+#include "Settings.h"
+
 class Piece {
     public:
         explicit Piece(sf::Color color);
@@ -24,8 +26,6 @@ class Piece {
         std::string imageName();
 
         sf::Color color;
-        float cellSize;
-        int boardSize;
         std::string position;
         std::string name;
 

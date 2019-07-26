@@ -176,6 +176,33 @@ src/PieceFactory.cpp.s:
 	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/PieceFactory.cpp.s
 .PHONY : src/PieceFactory.cpp.s
 
+src/Settings.obj: src/Settings.cpp.obj
+
+.PHONY : src/Settings.obj
+
+# target to build an object file
+src/Settings.cpp.obj:
+	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/Settings.cpp.obj
+.PHONY : src/Settings.cpp.obj
+
+src/Settings.i: src/Settings.cpp.i
+
+.PHONY : src/Settings.i
+
+# target to preprocess a source file
+src/Settings.cpp.i:
+	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/Settings.cpp.i
+.PHONY : src/Settings.cpp.i
+
+src/Settings.s: src/Settings.cpp.s
+
+.PHONY : src/Settings.s
+
+# target to generate assembly for a file
+src/Settings.cpp.s:
+	$(MAKE) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/Settings.cpp.s
+.PHONY : src/Settings.cpp.s
+
 src/bishop.obj: src/bishop.cpp.obj
 
 .PHONY : src/bishop.obj
@@ -434,6 +461,9 @@ help:
 	@echo ... src/PieceFactory.obj
 	@echo ... src/PieceFactory.i
 	@echo ... src/PieceFactory.s
+	@echo ... src/Settings.obj
+	@echo ... src/Settings.i
+	@echo ... src/Settings.s
 	@echo ... src/bishop.obj
 	@echo ... src/bishop.i
 	@echo ... src/bishop.s

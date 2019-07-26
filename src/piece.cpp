@@ -1,6 +1,6 @@
 #include "piece.h"
 
-Piece::Piece(sf::Color color_p) : color(color_p), cellSize(50.0f), boardSize(8){}
+Piece::Piece(sf::Color color_p) : color(color_p){}
 
 std::string Piece::getPosition(){
     return position;
@@ -11,10 +11,10 @@ void Piece::setPosition(const std::string& pos){
     char col = position.at(0);
     int row = static_cast<int>(position.at(1)-'0')-1;
     int intCol = static_cast<int>(col)-static_cast<int>('a');
-    float paddingX = cellSize-(static_cast<float>(texture.getSize().x)*sprite.getScale().x);
-    float paddingY = cellSize*3-(static_cast<float>(texture.getSize().y)*sprite.getScale().y);
-    sprite.setPosition(sf::Vector2f(intCol*cellSize+cellSize-static_cast<float>(boardSize)/2+paddingX/2,
-            static_cast<float>(boardSize)*cellSize-row*cellSize-static_cast<float>(boardSize)/2+paddingY/2));
+    float paddingX = Settings::cellSize-(static_cast<float>(texture.getSize().x)*sprite.getScale().x);
+    float paddingY = Settings::cellSize*3-(static_cast<float>(texture.getSize().y)*sprite.getScale().y);
+    sprite.setPosition(sf::Vector2f(intCol*Settings::cellSize+Settings::cellSize-static_cast<float>(Settings::boardSize)/2+paddingX/2,
+            static_cast<float>(Settings::boardSize)*Settings::cellSize-row*Settings::cellSize-static_cast<float>(Settings::boardSize)/2+paddingY/2));
 }
 
 sf::Vector2f Piece::getAbsolutePosition(){
@@ -47,7 +47,7 @@ void Piece::loadTexture(){
     sf::Vector2u textureSize = texture.getSize();
     float imageRatio = static_cast<float>(textureSize.x)/static_cast<float>(textureSize.y);
     float growthRatio;
-    float destSize = cellSize - 5;
+    float destSize = Settings::cellSize - 5;
     if(imageRatio > 1){
         growthRatio = (destSize/static_cast<float>(textureSize.x));
     } else {

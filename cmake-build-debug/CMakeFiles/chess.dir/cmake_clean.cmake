@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/chess.dir/src/rook.cpp.obj"
   "CMakeFiles/chess.dir/main.cpp.obj"
   "CMakeFiles/chess.dir/src/PieceFactory.cpp.obj"
+  "CMakeFiles/chess.dir/src/Settings.cpp.obj"
   "chess.pdb"
   "chess.exe"
   "chess.exe.manifest"

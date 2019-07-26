@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/pamar/Documents/MesDocuments/Projets/chess/main.cpp" "C:/Users/pamar/Documents/MesDocuments/Projets/chess/cmake-build-debug/CMakeFiles/chess.dir/main.cpp.obj"
   "C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/PieceFactory.cpp" "C:/Users/pamar/Documents/MesDocuments/Projets/chess/cmake-build-debug/CMakeFiles/chess.dir/src/PieceFactory.cpp.obj"
+  "C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/Settings.cpp" "C:/Users/pamar/Documents/MesDocuments/Projets/chess/cmake-build-debug/CMakeFiles/chess.dir/src/Settings.cpp.obj"
   "C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/bishop.cpp" "C:/Users/pamar/Documents/MesDocuments/Projets/chess/cmake-build-debug/CMakeFiles/chess.dir/src/bishop.cpp.obj"
   "C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/case.cpp" "C:/Users/pamar/Documents/MesDocuments/Projets/chess/cmake-build-debug/CMakeFiles/chess.dir/src/case.cpp.obj"
   "C:/Users/pamar/Documents/MesDocuments/Projets/chess/src/game.cpp" "C:/Users/pamar/Documents/MesDocuments/Projets/chess/cmake-build-debug/CMakeFiles/chess.dir/src/game.cpp.obj"
